@@ -19,7 +19,7 @@ beyondlog/tslog-kube  	0.1.0        	1.0        	Beyond Log tslog Kubernetes age
 * deploy Heroku HTTP log drain agent
 
 ```sh
-❯❯❯ helm install --name heroku-web --namespace <myns> --set config.agtid=<id>,config.cert=<cert>,config.server=wss://injector.<domain>/mqtt,config.labels.env=<dev>,config.labels.app=heroku-web,ingress.domain=<mydomain>,heroku.user=user,heroku.passwd=secret tslog-heroku
+❯❯❯ helm install --name heroku-web --namespace <myns> --set config.agtid=<id>,config.cert=<cert>,config.server=wss://injector.<domain>/mqtt,config.labels.env=<dev>,config.labels.app=heroku-web,ingress.domain=<mydomain>,heroku.user=user,heroku.passwd=secret beyondlog/tslog-heroku
 
 # add log drain
 ❯❯❯ heroku drains:add https://user:secret@heroku.<myns>.<mydomain>/logs
@@ -28,6 +28,6 @@ beyondlog/tslog-kube  	0.1.0        	1.0        	Beyond Log tslog Kubernetes age
 * deploy Beyond Log Kubernetes agent
 
 ```sh
-# deploy kube agent will send logs to injector.test.tslog.tristonetech.com
-❯❯❯ helm install --name tslog-kube --namespace <myns> --set config.cert=<cert>,config.server=wss://injector.test.tslog.tristonetech.com/mqtt,config.labels.env=<minikube> tslog-kube
+# deploy kube agent will send logs to injector.<myhost>.tslog.tristonetech.com
+❯❯❯ helm install --name tslog-kube --namespace <myns> --set config.cert=<cert>,config.server=wss://injector.<myhost>.tslog.tristonetech.com/mqtt,config.labels.env=<myenv> beyondlog/tslog-kube
 ```
