@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  tslog-heroku:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-09-03T16:17:07.328815-07:00
+    description: Beyond Log Heroku http log drain agent helm package
+    digest: a1896fe09a73c761f051347ef6c8df819c955d30f191d21690ea25944720d2bc
+    name: tslog-heroku
+    urls:
+    - tslog-heroku-0.1.0.tgz
+    version: 0.1.0
+  tslog-kube:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-09-03T16:17:07.329176-07:00
+    description: Beyond Log tslog Kubernetes agent
+    digest: 6a4356a1d25226b7baf002d618a8dbbe67e304ea7e538a250017bf8d3d3e7933
+    name: tslog-kube
+    urls:
+    - tslog-kube-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-09-03T16:17:07.327702-07:00
