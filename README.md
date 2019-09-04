@@ -1,5 +1,6 @@
 # Instruction
 
+Copy **cert** from 'deploy agent' tab on Weclome page. Please visit https://login.tslog.tristonetech.com to login
 
 * add Beyond Log helm chart repo
 
@@ -25,7 +26,7 @@ beyondlog/tslog-kube  	0.1.0        	1.0        	Beyond Log tslog Kubernetes age
 ❯❯❯ heroku drains:add https://user:secret@heroku.<myns>.<mydomain>/logs
 ```
 
-* deploy Beyond Log Kubernetes agent
+* deploy Beyond Log Kubernetes agent. (Only supports json-file log-driver)
 
 ```sh
 # deploy kube agent will send logs to injector.<myhost>.tslog.tristonetech.com
